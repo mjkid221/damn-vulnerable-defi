@@ -180,6 +180,7 @@ describe("[Challenge] Wallet mining", function () {
       (
         await provider.getStorageAt(
           authorizer.address,
+          // ERC-1967 slot for the implementation contract
           "0x360894a13ba1a3210667c828492db98dca3e2076cc3735a920a3ca505d382bbc"
         )
       ).slice(-40);
