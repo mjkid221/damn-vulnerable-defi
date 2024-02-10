@@ -1,15 +1,20 @@
 ![](cover.png)
 
-**A set of challenges to learn offensive security of smart contracts in Ethereum.**
+# MJ's Comprehensive Solutions to DamnVulnerableDeFi Challenges
+Welcome to the repository dedicated to the solutions for the DamnVulnerableDeFi challenges, a series of offensive security challenges on Ethereum smart contracts, spanning from flash loans, price oracles, governance, NFTs, lending pools, smart contract wallets, timelocks and etc. This collection not only includes the exploit scripts and smart contracts but also detailed write-ups and annotated code to guide you through the thought process behind each solution.
 
-Featuring flash loans, price oracles, governance, NFTs, lending pools, smart contract wallets, timelocks, and more!
+All of the exploits have been methodically organised within the test/ directory, corresponding to each challenge.
+Any additional supplementary materials like smart contracts that has been written for the challenge have been included in each contract challenge folders.
 
-## Play
+I would like to extend my sincere appreciation to [@tinchoabbate](https://github.com/tinchoabbate) for crafting these intricate and educational challenges.
 
-Visit [damnvulnerabledefi.xyz](https://damnvulnerabledefi.xyz)
+## Testing the challenges
+To begin, ensure that all necessary dependencies are installed by executing:
 
-## Disclaimer
+`yarn install`
 
-All Solidity code, practices and patterns in this repository are DAMN VULNERABLE and for educational purposes only.
+To execute a specific challenge solution, use the following command structure:
 
-DO NOT USE IN PRODUCTION.
+`yarn run <CHALLENGE_NAME>`
+
+Please replace <CHALLENGE_NAME> with the actual name of the challenge you wish to run.
